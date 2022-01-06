@@ -122,3 +122,12 @@ REST_FRAMEWORK = {
     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
     #'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
+
+STATIC_URL = '/static/'
+
+LOCAL_STATIC_CDN_PATH = os.path.join(BASE_DIR,'static_cdn')
+STATIC_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH,'static/')
+STATICFILES_DIRS = [
+	os.path.join(BASE_DIR,'staticfiles'),
+	#os.path.join(BASE_DIR,'static_cdn/static/'),
+] 

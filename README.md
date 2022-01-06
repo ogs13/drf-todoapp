@@ -8,6 +8,9 @@ vertion 1 of a RESTFul API to create users and tasks. Each user can register and
 
 ## End Points
 
+### Django admin panel
+-   `/admin/`
+
 ### Tasks
 -   `GET /api/todos/`
 -   `POST /api/todos/`
@@ -34,6 +37,9 @@ Clone the repository `https://github.com/ogs13/drf-todoapp.git`
 
 `docker-compose up -d`
 
+#### to create first user (admin):
+`docker exec -it django-todoapp python manage.py createsuperuser`
+
 ## Run the test
 
-`python manage.py test`
+`docker exec -it django-todoapp python manage.py test`
